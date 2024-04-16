@@ -7,17 +7,17 @@ form.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(event) {
   event.preventDefault();
-  const delay = +event.currentTarget.elements.delay.value;
+  const delay = event.currentTarget.elements.delay.value;
   const radioButton = event.currentTarget.elements.state.value;
 
   createPromise(radioButton, delay)
-    .then(res => {
+    .then(() => {
       iziToast.success({
         message: `✅ Fulfilled promise in ${delay}ms`,
         position: 'topRight',
       });
     })
-    .catch(error => {
+    .catch(() => {
       iziToast.error({
         message: `❌ Rejected promise in ${delay}ms`,
         position: 'topRight',
