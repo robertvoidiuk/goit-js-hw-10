@@ -56,7 +56,7 @@ function onClick() {
       clearInterval(intervalId);
       input.disabled = false;
       iziToast.success({
-        message: 'Thank you for your visit:)',
+        message: 'Time out',
         position: 'topRight',
         messageColor: '#fff',
         backgroundColor: '#59a10d',
